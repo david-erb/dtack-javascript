@@ -1,0 +1,35 @@
+
+/* ------------------------------------------------------------------------------------ */
+
+.dtack_utility_waiting_indicator_div {
+    position: fixed;
+    z-index: 3000;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    background-color: rgba(255, 255, 255, .8);
+    background-position: 400px 400px;
+    background-repeat: no-repeat;
+}
+BODY.initial_body .dtack_utility_waiting_indicator_div {
+    background-image: url('waiting_pk_red.gif');
+}
+BODY.dtack_utility_waiting_state_class .dtack_utility_waiting_indicator_div {
+    background-image: url('waiting_pk_black.gif');
+}
+
+/* when the body has the loading class, we turn the scrollbar off with overflow:hidden */
+BODY.initial_body,
+BODY.dtack_utility_waiting_state_class {
+  overflow: auto;
+}
+
+/* anytime the body has the loading class, our modal element will be visible */
+BODY.initial_body .dtack_utility_waiting_indicator_div,
+BODY.dtack_utility_waiting_state_class .dtack_utility_waiting_indicator_div {
+    display: block;
+    height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,39 @@
+
+                                              
+.dt_validation_messages_div,
+.dtvalidation_message_div {
+	color: #FF0000;
+	font-weight: bold;
+	background-color: #FFEEEE;
+	border: 1px solid red;
+	padding: 4px;
+	margin: 8px;
+}
+
+.validation_message_div {
+    color: #FF0000;
+    font-weight: normal;
+    background-color: #FFEEEE;
+    padding: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;       
+}
+
+/* this is used in rendering detailed validation messages */
+
+.dt_validation_messages_div
+{
+  border: 1px solid red;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  padding: 4px 7px;
+}
+
+.dt_validation_messages_div TABLE {border: none;}
+.dt_validation_messages_div .label_div {margin-bottom: 4px;}
+.dt_validation_messages_div .label_reason_div {margin-bottom: 4px;}
+
+.dt_validation_messages_div .reason_div {margin-left: 32px;}
+.dt_validation_messages_div .label_td {vertical-align: top; padding-right: 4px; padding-top: 4px;}
+.dt_validation_messages_div .reason_td {vertical-align: top; padding-top: 4px;}

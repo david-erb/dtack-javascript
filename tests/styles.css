@@ -1,0 +1,38 @@
+/* --------------------------------------------------------------- */
+BODY,
+TH,
+TD,
+A,
+INPUT,
+TEXTAREA,
+SELECT,
+.T_standard_font
+{
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-size: 11px;
+}
+
+A:link,
+A:visited,
+A:active,
+A:hover {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+}
+A:hover {
+    color: green; 
+}
+
+.page_title
+{
+  font-weight: bold;
+  color: white;
+  background-color: #444444;
+  padding: 4px;
+}
+
+DIV.dtack_environment_debug_div
+{
+  display: block;
+}

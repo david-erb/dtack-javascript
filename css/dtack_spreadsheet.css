@@ -1,0 +1,60 @@
+
+TABLE.T_dtack_spreadsheet
+{
+  width: 100%;
+}
+
+TABLE.T_dtack_spreadsheet > TBODY > TR.T_excluded > TD
+{
+  color: gray;
+}
+
+TABLE.T_dtack_spreadsheet > TBODY > TR.T_included .T_toggle_inclusion_clickable.clickable_icon_div
+{
+  background-image: url(../fugue_pngs/tick.png);
+}
+
+TABLE.T_dtack_spreadsheet > TBODY > TR.T_excluded .T_toggle_inclusion_clickable.clickable_icon_div
+{
+  background-image: url(../fugue_pngs/minus.png);
+}
+
+TABLE.T_dtack_spreadsheet .T_toggle_expansion_clickable
+{
+  width: 9px;
+  height: 9px;
+  cursor: pointer;
+}
+
+TABLE.T_dtack_spreadsheet .T_collapsed .T_toggle_expansion_clickable
+{
+  display: block;
+  background-image: url(dtack_collapser_plus.gif);
+}
+
+TABLE.T_dtack_spreadsheet .T_collapsed .T_expandable
+{
+  display: none
+}
+
+TABLE.T_dtack_spreadsheet .T_expanded .T_toggle_expansion_clickable
+{
+  display: block;
+  background-image: url(dtack_collapser_minus.gif);
+}
+                                                     
+TABLE.T_dtack_spreadsheet .T_expanded .T_expandable
+{
+  display: block;
+}
+
+                   
+TABLE.T_dtack_spreadsheet .T_maximize_value_clickable                   
+{
+  display: inline-block;
+  background-image: url(../fugue_pngs/control-stop-090-small.png);
+  background-position: -4px -4px;
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+}

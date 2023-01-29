@@ -1,0 +1,10 @@
+
+.dtack_beacon_pagebreak,
+.dtack_beacon_begin,
+.dtack_beacon_end,
+.dtack_beacon_text,
+.dtack_beacon_container .T_begin,
+.dtack_beacon_container .T_end
+{
+  display: none;
+}

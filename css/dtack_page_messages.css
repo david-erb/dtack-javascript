@@ -1,0 +1,74 @@
+
+/* --------------------------------------------------------------------------------------------*/
+
+.processing_confirmation_div
+{
+  max-height: 480px;
+  overflow: auto;
+}
+
+.validation_message_div,
+.processing_error_div,
+.processing_confirmation_div,
+.privilege_error_div,
+.system_error_div,
+.warning_message_div
+{
+    font-weight: normal;
+    font-style:italic;
+    padding: 8px;
+    margin: 8px;
+    border: 1px solid gray;
+    border-radius:10px;
+}
+
+.validation_message_div::first-letter,
+.processing_error_div::first-letter,
+.privilege_error_div::first-letter,
+.system_error_div::first-letter,
+.warning_message_div::first-letter
+{
+  text-transform: uppercase;
+}
+
+.validation_message_div {
+	color: #FF0000;
+	background-color: #FFEEEE; 
+}
+
+.processing_error_div {
+    color: #FF0000;
+    background-color: #FFEEEE;  
+}
+
+.processing_confirmation_div {
+    color: #004400;
+    background-color: #EEFFEE; 
+}
+
+.privilege_error_div {
+    color: #004466;
+    background-color: #EEFFFF;
+}
+
+.system_error_div {
+    color: #FF0000;
+    background-color: #FFFF44; 
+}
+
+.warning_message_div {
+    color: #000044;
+    background-color: #EEEEFF; 
+}
+ 
+
+/* this is used in rendering detailed validation messages */
+.dt_validation_messages_div TABLE {border: none;}
+.dt_validation_messages_div .label_div {margin-top: 16px;}
+.dt_validation_messages_div .label_div:first-child {margin-top: 0px;}
+.dt_validation_messages_div .label_reason_div {margin-top: 4px;}
+.dt_validation_messages_div .label_reason_div:first-child {margin-top: 0px;}
+
+.dt_validation_messages_div .reason_div {margin-left: 40px;}
+.dt_validation_messages_div .label_td {vertical-align: top; padding-right: 4px; padding-top: 4px;}
+.dt_validation_messages_div .reason_td {vertical-align: top; padding-top: 4px;}

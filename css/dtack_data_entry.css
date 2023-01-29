@@ -1,0 +1,18 @@
+
+.data_entry_validation_message
+{
+  color: red;
+  font-weight: bold;
+  font-style: italic;
+  padding-left: 8px;
+}
+
+.data_entry_validation_message.T_showing
+{
+  display: inline-block;
+}
+
+.data_entry_validation_message.T_hidden
+{
+  display: none;
+}

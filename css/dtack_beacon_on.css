@@ -1,0 +1,70 @@
+
+/* eztask #10245: (satellite) remove BEGIN/END debug in PDF report */
+
+TR.dtack_beacon_begin TD, 
+.dtack_beacon_begin,
+TR.dtack_beacon_end TD, 
+.dtack_beacon_end,
+.dtack_beacon_text 
+{
+  border-left: 2px solid #446666; 
+  border-right: 2px solid #446666;
+  padding: 2px;
+  margin-left: 1px;
+  margin-right: 1px;
+  background-color: #CCEEEE; 
+  color: #446666;
+  font-size: 10px;
+  font-family: Verdana;
+}
+
+TR.dtack_beacon_begin TD, 
+.dtack_beacon_begin 
+{
+  border-top: 2px solid #446666; 
+}
+TR.dtack_beacon_end TD, 
+.dtack_beacon_end 
+{
+  border-bottom: 2px solid #446666; 
+}
+
+.dtack_beacon_pagebreak {
+  padding: 4px;
+  color: white;
+  font-weight: bold;
+  background-color: #004400;
+}
+
+
+.dtack_beacon_text 
+{
+  border-top: 2px solid #446666; 
+  border-bottom: 2px solid #446666; 
+}
+
+.dtack_beacon_container
+{
+  margin: 2px;
+  border: 2px solid black;
+}
+
+.dtack_beacon_container .T_begin,
+.dtack_beacon_container .T_end
+{
+  padding: 2px;
+  background-color: #CCEEEE; 
+  color: #446666;
+  font-size: 10px;
+  font-family: Verdana;
+}
+
+.dtack_beacon_container .T_begin,
+{
+  border-bottom: 1px solid black;
+}
+
+.dtack_beacon_container .T_end
+{
+  border-top: 1px solid black;
+}

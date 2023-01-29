@@ -1,0 +1,448 @@
+// --------------------------------------------------------------------
+// class representing a drawing mode 
+
+										// inherit the base methods and variables
+dtack_drawing_mode_base_c.prototype = new dtack_base2_c();
+
+										// override the constructor
+dtack_drawing_mode_base_c.prototype.constructor = dtack_drawing_mode_base_c;
+
+// -------------------------------------------------------------------------------
+// constructor (functioning as a prototype, this constructor cannot take arguments)
+
+function dtack_drawing_mode_base_c(page, classname)
+{
+										// we are not doing a prototype construction?
+  if (arguments.length > 0)
+  {
+	var F = "dtack_drawing_mode_base_c";
+
+	this.parent = dtack_base2_c.prototype;
+										/* call the base class constructor helper */
+	this.parent.constructor.call(this, page.dtack_environment, classname);
+  }
+
+										/* remember the page who is housing us */
+  this.page = page;
+										/* object describing common drawing mode attributes */
+  this.definition_object = null;
+  this.definition_object2 = null;
+
+  this.drawat_x = 0;
+  this.drawat_y = 0;
+
+  this.mouse_x = 0;
+  this.mouse_y = 0;
+}
+
+// -------------------------------------------------------------------------------
+dtack_drawing_mode_base_c.prototype.initialize = function(definition_object)
+{
+  var F = "initialize";
+										/* remember the server-supplied javascript object describing the tool  */
+  this.definition_object = definition_object;
+
+  this.debug_identifier = definition_object.name;
+
+  try
+  {
+										/* parse the jso-formatted database field called "definition_data" */
+	eval("this.definition_object2 = {" + this.definition_object.definition_data + "};");
+  }
+  catch(exception)
+  {
+	this.debug(F, "invalid definition_data: \"" + this.definition_object.definition_data + "\"");
+	this.definition_object2 = new Object();
+  }
+
+  //this.debug(F, "initializing");
+
+} // end method
+
+// -------------------------------------------------------------------------------
+
+dtack_drawing_mode_base_c.prototype.activate = function()
+{
+  var F = "activate";
+
+										/* presume the label indicates the mode */
+  var s = this.definition_object.label + " mode activated";
+
+										// this mode has a specific acknowledgement?
+  if (this.definition_object.acknowledge_user_action != "")
+  {
+	s += ": " + this.definition_object.acknowledge_user_action;
+  }
+  else
+  {
+  }
+
+  this.page.acknowledge_user_action(F, s);
+} // end method
+
+// --------------------------------------------------------------------
+// use ajax to send the "create vertex" notification
+
+dtack_drawing_mode_base_c.prototype.ajax_create_vertex = function(uuid, edge_uuid, x, y, drawing_tool_autoid)
+{
+  var F = "ajax_create_vertex";
+
+  if (this.page.ajax_url != undefined)
+  {
+	var edge = this.page.canvas.edges[edge_uuid]
+	var edge_xml = "";
+
+	if (edge != undefined && !edge.has_been_ajaxed)
+	{
+	  edge_xml =
+	    "<command action=\"create_edge\"" +
+	    " uuid=\"" + edge.uuid + "\"" +
+	    " definition_data=\"" + dtack_utility_escape_xml(dtack_utility_jso(edge.definition_object)) + "\"" +
+	    "></command>";
+
+	  edge.has_been_ajaxed = true;
+	}
+
+	var xml =
+	  "<request>" +
+	  "<phpsessionid>" + this.phpsessionid + "</phpsessionid>" +
+	  "<commands>" +
+	  edge_xml +
+	  "<command action=\"create_vertex\"" +
+	  " uuid=\"" + uuid + "\"" +
+	  " x=\"" + x + "\"" +
+	  " y=\"" + y + "\"" +
+	  " drawing_tool_autoid=\"" + drawing_tool_autoid + "\"" +
+	  " edge_uuid=\"" + (edge != null? edge.uuid: uuid) + "\"" +
+	  "></command>" +
+	  "</commands>" +
+	  "</request>";
+
+	var ajax = new dtack_ajax_c();
+
+	var url = this.page.ajax_url;
+
+// don't tack on debug=1 to ajax url
+// watchfrog #12
+	//if (this.dtack_environment.debug_level == 1)
+	//  url += "?debug=1";
+	  
+	this.debug(F, "telling server to create vertex by hitting " + url);
+	this.debug(F, xml);
+
+	ajax.post(F, url, xml, this, "ajax_created_vertex");
+  }
+  else
+  {
+	this.debug(F, "not hitting ajax becaue this.page.ajax_url is undefined");
+  }
+} // end method
+
+// -------------------------------------------------------------------------------
+// this is the callback which gets called when php has responded to the ajax call
+
+dtack_drawing_mode_base_c.prototype.ajax_created_vertex = function(ajax)
+{
+  var F = "ajax_created_vertex";
+
+										/* do standard post-ajax stuff */
+  this.ajax_standard_php_callback(ajax);
+
+  var name = this.definition_object2.human_readable_name;
+  if (name == undefined)
+  name = this.definition_object.name;
+
+										/* let the page display acknowledgement of this */
+  this.page.acknowledge_user_action(F, "new " + name + " created");
+
+} // end method
+
+// --------------------------------------------------------------------
+// use ajax to send multipe "create vertex" notifications
+
+dtack_drawing_mode_base_c.prototype.create_vertices_xml = function(vertices)
+{
+  var F = "create_vertices";
+
+  var edges_xml = "";
+  var vertices_xml = "";
+
+										/* for each vertex to be created */
+  for(var k in vertices)
+  {
+										/* for short */
+	var k_vertex = vertices[k];
+
+										/* this vertex's edge */
+	var edge = this.page.canvas.edges[k_vertex.edge_uuid]
+
+										/* it has an edge which is not ajaxed yet? */
+	if (edge != undefined && !edge.has_been_ajaxed)
+	{
+	  edges_xml +=
+	      "<command action=\"create_edge\"" +
+	      " uuid=\"" + edge.uuid + "\"" +
+	      " definition_data=\"" + dtack_utility_escape_xml(dtack_utility_jso(edge.definition_object)) + "\"" +
+	      "></command>";
+
+	  edge.has_been_ajaxed = true;
+	}
+
+	var x = k_vertex.x + k_vertex.anchor_x;
+	var y = k_vertex.y + k_vertex.anchor_y;
+	vertices_xml +=
+	    "<command action=\"create_vertex\"" +
+	    " uuid=\"" + k_vertex.uuid + "\"" +
+	    " x=\"" + x + "\"" +
+	    " y=\"" + y + "\"" +
+	    " drawing_tool_autoid=\"" + this.definition_object.autoid + "\"" +
+	    " edge_uuid=\"" + (edge != null? edge.uuid: uuid) + "\"" +
+        "></command>";
+  }
+	  
+  return edges_xml + vertices_xml;
+
+} // end method
+
+// --------------------------------------------------------------------
+// this function gets called by the trigger handler method vertex_moved()
+// use ajax to send the "move vertex" notification
+
+dtack_drawing_mode_base_c.prototype.ajax_move_vertex = function(uuid, x, y)
+{
+  var F = "ajax_move_vertex";
+
+  if (this.page.ajax_url != undefined)
+  {
+	var xml =
+	  "<request>" +
+	  "<phpsessionid>" + this.phpsessionid + "</phpsessionid>" +
+	  "<commands>" +
+	  "<command action=\"move_vertex\"" +
+	  " uuid=\"" + uuid + "\"" +
+	  " x=\"" + x + "\"" +
+	  " y=\"" + y + "\"" +
+	  "></command>" +
+	  "</commands>" +
+	  "</request>";
+
+	var ajax = new dtack_ajax_c();
+
+	var url = this.page.ajax_url;
+
+// don't tack on debug=1 to ajax url
+// watchfrog #12
+	//if (this.dtack_environment.debug_level == 1)
+	//  url += "?debug=1";
+	  
+	this.debug(F, "telling server to move vertex by hitting " + url);
+	this.debug(F, xml);
+
+	ajax.post(F, url, xml, this, "ajax_moved_vertex");
+  }
+  else
+  {
+	this.debug(F, "not hitting ajax becaue this.page.ajax_url is undefined");
+  }
+} // end method
+
+// -------------------------------------------------------------------------------
+// this is the callback which gets called when php has responded to the ajax call
+
+dtack_drawing_mode_base_c.prototype.ajax_moved_vertex = function(ajax)
+{
+  var F = "ajax_moved_vertex";
+
+										/* do standard post-ajax stuff */
+  var ok = this.ajax_standard_php_callback(ajax);
+
+  if (ok)
+  {
+										/* let the page display acknowledgement of this */
+	this.page.acknowledge_user_action(F, "vertex moved");
+  }
+  else
+  {
+										/* let the page display rejection of this */
+	this.page.reject_user_action(F, "unable to move vertex");
+  }
+
+} // end method
+
+// -------------------------------------------------------------------------------
+// this function gets called by the trigger set on the vertex
+
+dtack_drawing_mode_base_c.prototype.vertex_moved = function(vertex)
+{
+  var F = "vertex_moved";
+
+  this.debug(F, "need to tell ajax that we moved vertex " + vertex.uuid);
+
+  var bbox = vertex.raphael_object.getBBox();
+
+										/* notify ajax of the new vertex position */
+  this.ajax_move_vertex(
+	vertex.uuid,
+	vertex.x + vertex.anchor_x,
+	vertex.y + vertex.anchor_y);
+
+} // end method
+
+
+
+// -------------------------------------------------------------------------------
+// 
+dtack_drawing_mode_base_c.prototype.onclick_vertex = function(event_object, vertex)
+{
+  var F = "onclick_vertex";
+
+  //this.debug(F, "clicked vertex " + vertex.uuid);
+
+} // end method
+
+// -------------------------------------------------------------------------------
+// on being consistent with the philosophy that a double click acts on an existing vertex,
+// the mode should not be notified that it is happening
+
+//dtack_drawing_mode_base_c.prototype.ondblclick_vertex = function(event_object, vertex)
+//{
+//  var F = "ondblclick_vertex";
+//
+//  this.debug(F, "dbl clicked vertex " + vertex.uuid);
+//} // end method
+
+// -------------------------------------------------------------------------------
+// 
+dtack_drawing_mode_base_c.prototype.onmousedown = function(event_object)
+{
+  var F = "onmousedown";
+
+  if (!event_object)
+    event_object = window.event;
+
+  this.mouse_x = dtack_utility_mouse_event_page_x(event_object);
+  this.mouse_y = dtack_utility_mouse_event_page_y(event_object);
+
+										/* the canvas knows its raphael div? */
+										// watchfrog #9
+  if (this.page.canvas.raphael_div != null)
+  {
+	var r = this.getRelativeCoordinates(event_object, this.page.canvas.raphael_div);
+	this.debug(F, 
+    "mouse down " +
+    " at " + this.mouse_x + ", " + this.mouse_y +
+    " on raphael div" +
+    " is relative " + r.x + ", " + r.y);
+
+	this.drawat_x = r.x;
+	this.drawat_y = r.y;
+  }
+										/* the canvas doesn't know its raphael div? */
+  else
+  {
+										/* do this a less accurate way */
+	this.drawat_x = this.mouse_x - this.page.canvas.raphael_x0;
+	this.drawat_y = this.mouse_y - this.page.canvas.raphael_y0;
+
+	this.debug(F, 
+    "mouse down " +
+    " at " + this.mouse_x + ", " + this.mouse_y +
+    " on raphael at " + this.page.canvas.raphael_x0 + ", " + this.page.canvas.raphael_y0 +
+    " is relative " + this.drawat_x + ", " + this.drawat_y);
+  }
+} // end method
+
+// -------------------------------------------------------------------------------
+
+dtack_drawing_mode_base_c.prototype.getAbsolutePosition = function(element) 
+{
+  var r = { x: element.offsetLeft, y: element.offsetTop };
+
+  if (element.offsetParent) 
+  {
+	var tmp = this.getAbsolutePosition(element.offsetParent);
+	r.x += tmp.x;
+	r.y += tmp.y;
+  }
+  return r;
+}
+
+// -------------------------------------------------------------------------------
+// thanks to http://blogs.korzh.com/progtips/2008/05/28/absolute-coordinates-of-dom-element-within-document.html  
+/**
+ * Retrieve the coordinates of the given event relative to the center
+ * of the widget.
+ *
+ * @param event
+ *   A mouse-related DOM event.
+ * @param reference
+ *   A DOM element whose position we want to transform the mouse coordinates to.
+ * @return
+ *    A hash containing keys 'x' and 'y'.
+ */
+
+// !!!!!! THIS FUNCTIONALITY CAN NOW BE HAD IN DTACK_UTILITY !!!!!!!!!
+
+dtack_drawing_mode_base_c.prototype.getRelativeCoordinates = function(event, reference) 
+{
+  var x, y;
+  event = event || window.event;
+  var el = event.target || event.srcElement;
+  
+  if (!window.opera && typeof event.offsetX != 'undefined') 
+  {
+										// Use offset coordinates and find common offsetParent
+	var pos = { x: event.offsetX, y: event.offsetY };
+	  
+										// Send the coordinates upwards through the offsetParent chain.
+	var e = el;
+	while (e) 
+	{
+	  e.mouseX = pos.x;
+	  e.mouseY = pos.y;
+	  pos.x += e.offsetLeft;
+	  pos.y += e.offsetTop;
+	  e = e.offsetParent;
+	}
+	
+										// Look for the coordinates starting from the reference element.
+	var e = reference;
+	var offset = { x: 0, y: 0 }
+	while (e) 
+	{
+	  if (typeof e.mouseX != 'undefined') {
+		x = e.mouseX - offset.x;
+		y = e.mouseY - offset.y;
+		break;
+	  }
+	  offset.x += e.offsetLeft;
+	  offset.y += e.offsetTop;
+	  e = e.offsetParent;
+	}
+
+										// Reset stored coordinates
+	e = el;
+	while (e) 
+	{
+	  e.mouseX = undefined;
+	  e.mouseY = undefined;
+	  e = e.offsetParent;
+	}
+  }
+  else 
+  {
+										// Use absolute coordinates
+	var pos = this.getAbsolutePosition(reference);
+	x = event.pageX  - pos.x;
+	y = event.pageY - pos.y;
+  }
+										// Subtract distance to middle
+  return { x: x, y: y };
+} // end method
+
+// -------------------------------------------------------------------------------
+
+dtack_drawing_mode_base_c.prototype.which_name = function(which)
+{
+  return which.classname + "[" + which.debug_identifier + "]";
+} // end method

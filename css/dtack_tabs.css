@@ -1,0 +1,58 @@
+
+
+/* --------------------------------------------------------------------------------------------*/
+.dtack_tabs
+{
+}
+
+.dtack_tabs .T_horizontal.T_bar
+{
+}
+
+.dtack_tabs .T_horizontal.T_bar .T_clickable
+{
+  display: inline-block;
+  cursor: pointer;
+
+  border: 2px solid #ccc;
+  
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 4px;
+  margin-left: 8px;
+  outline: 0;
+
+  border-bottom: none;
+  
+  position: relative;
+  top: 2px;
+}
+
+.dtack_tabs .T_horizontal.T_bar .T_clickable:first-child
+{
+}
+
+.dtack_tabs .T_horizontal.T_bar .T_clickable
+{
+  font-weight: bold;
+  background-color:#D6EDFF;
+}
+
+.dtack_tabs .T_horizontal.T_bar .T_clickable.T_current,
+.dtack_tabs .T_horizontal.T_bar .T_clickable .T_current
+{
+  background-color:#FFF;
+  border-bottom: 2px solid white;
+}
+
+.dtack_tabs.T_horizontal.T_container.T_top
+{
+  color: red;
+  
+  height: 8px;
+  border: 2px solid #ccc;
+  border-bottom: none;
+  
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}

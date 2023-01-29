@@ -1,0 +1,361 @@
+
+
+/* --------------------------------------------------------------------------------------------*/
+.dtproperty_dualdown {
+   border: 1px solid silver;
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+                                        /* dualdowns appear in a table with 3 cells */
+.dtproperty_dualdown_container_div TD {text-align: center;}
+
+                                        /* buttons in the middle cell are in their own divs */
+.dtproperty_dualdown_container_div .dtproperty_dualdown_button_div {padding: 4px;}
+                                        /* separator between the "single" and "all" buttons */
+.dtproperty_dualdown_separator_div {height: 16px;}
+
+                                        /* icons for the buttons */
+.dtproperty_dualdown_icon_img {border: none; padding-left: 8px; padding-right: 8px;}
+
+                                        /* how the select boxes themselves look */
+.dtproperty_dualdown_container_div SELECT {width: 200px; height: 100px;}
+
+                                        /* this is the filter input text box */
+.dtproperty_dualdown_filter_input {
+   border: 1px solid silver;
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.dtproperty_dualdown_invisible_option {display: none;}
+
+/* --------------------------------------------------------------------------------------------*/
+.dtproperty_autogrow
+{
+  height: 21px; 
+  padding-top: 2px; 
+  padding-bottom: 2px;
+  width: 500px;
+  line-height: 1.2;
+}
+
+/* --------------------------------------------------------------------------------------------*/
+/* individual property styles */
+.dtcomposer_radio_radio_td,
+.guts_div .add_another_table .dtcomposer_radio_radio_td,
+.dtcomposer_radio_label_td,
+.guts_div .add_another_table .dtcomposer_radio_label_td 
+{
+    padding-left: 0px;
+    padding-top: 2px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    vertical-align: middle;
+}
+TABLE.dtproperty_radios_td > TBODY > TR > TD {padding-right: 16px;}
+
+.dtcomposer_radio_label_td,
+.guts_div .add_another_table .dtcomposer_radio_label_td {
+    padding-right: 20px;
+}
+
+table.dtproperty_checkboxes_td
+{
+}
+
+table.dtproperty_checkbox > TBODY > TR > TD 
+{
+  vertical-align: baseline;
+}
+
+table.dtproperty_checkbox > TBODY > TR > TD > SPAN.dtcomposer_checkboxes_label_span,
+table.dtproperty_checkbox > TBODY > TR > TD > INPUT
+{
+  vertical-align: middle;
+}
+                                       
+/* this will hide the checkbox labels, is used for yes-only in a grid */
+
+.dtproperty_checkbox_hidden_labels .dtcomposer_checkboxes_label_span {display: none;}
+
+                                        /* keep the label aligned to top in case it's a multi-line label */
+                                        /* use padding to shift down the first line nicely */
+                                        /* eztask #5956: HQ: edit fields dont line up with prompts on Firefox */
+.dtproperty_checkbox_label_td 
+{
+  vertical-align: top;
+  padding-right: 20px;
+  padding-top: 2px;
+}
+.dtproperty_checkbox_label_td.T_disabled
+{
+  color: gray;
+}
+
+                                        /* make the checkbox section headers a different color and underlined */
+.dtproperty_checkbox_td .checkbox_section_first_div,
+.dtproperty_checkbox_td .checkbox_section_div {
+  font-weight: bold;
+  color: #800000;
+  border-bottom: 1px solid #800000;
+  padding-left: 4px; padding-right: 4px;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}                                                      
+
+.dtproperty_checkbox_td .checkbox_section_first_div
+{
+  margin-top: 0px;
+}
+
+.dtproperty_textbox, 
+.dtproperty_longtext, 
+.dtproperty_pulldown, 
+.dtproperty_radio_table,
+table.dtproperty_checkbox_table,                 /* mm050318  */
+.dtproperty_autogrow
+{
+  border: 1px solid #ccc;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: 0px 0px 3px #C8C8C8;
+  -webkit-box-shadow: 0px 0px 3px #C8C8C8;
+  box-shadow: 0px 0px 3px #C8C8C8;
+  padding: 4px 7px;
+  outline: 0;
+  -webkit-appearance: none;
+}
+                                        /* these styles are added to modify other dtproperty styles */
+.dtproperty_integer,
+.dtproperty_float,
+.dtproperty_short {
+    width: 52px;
+}
+.dtproperty_zipcode {
+    width: 72px;
+}
+.dtproperty_date,
+.dtproperty_dateonly
+{
+    width: 72px;
+}
+.dtproperty_time24
+{
+    width: 48px;
+}
+.dtproperty_veryshort {
+    width: 24px;
+}
+.dtproperty_first_name,
+.dtproperty_last_name,
+.dtproperty_email 
+{
+    width: 240px;
+}
+.dtproperty_medium {
+    width: 320px;
+}
+TEXTAREA.dtproperty_medium {
+    height: 48px;
+}
+.dtproperty_medium2 {
+    width: 240px;
+}
+.dtproperty_mediumwide {
+    width: 180px;
+}
+.dtproperty_wide {
+    width: 500px;
+}
+.dtproperty_wide2 {
+    width: 500px;
+    height: 40px;
+}
+.dtproperty_longtext {
+    width: 500px;
+    height: 40px;
+}
+.dtproperty_medium2tall {
+    width: 240px;
+}
+.dtproperty_widetall {
+    width: 500px;
+    height: 100px;
+}
+.dtproperty_wideverytall {
+    width: 500px;
+    height: 300px;
+}
+.dtproperty_half {
+    width: 240px;
+}
+.dtproperty_halftall {
+    width: 240px;
+    height: 50px;
+}
+.dtproperty_verywide {
+    width: 900;
+}
+.dtproperty_tall {
+    height: 100px;
+}
+.dtproperty_orders {
+    width: 200px;
+}
+.dtproperty_orders_tall {
+    width: 200px;
+    height: 100px;
+     color: white;
+}
+
+                                        /* this style is used for a property with a validation problem */
+                                        /* need to specify what happens when both required and invalid */
+.dtproperty_invalid,
+.dtproperty_invalid.dtproperty_required 
+{
+  background-color: #FFCCCC;
+}
+                                        /* this style is used for a required property */
+.dtproperty_required 
+{
+  background-color: #FFFF99;
+}
+                                        /* this style is used near properties with validation problems */
+.dtproperty_error 
+{
+  background-color: #FFEEEE;
+  color: red;
+  border: 1px solid red;
+  font-weight: bold; 
+  font-style: italic;
+  padding: 4px; 
+  display: inline-block;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+
+/* first tabularium to use this is au100 application_kmls */
+/* see also dtphp composer related watchfrog #215 */
+TABLE.dtproperty_file_input_table A.T_view_file
+{
+  font-weight: bold;
+  color: blue;
+}
+
+/* ------------------------------------------------------------------------------ */
+.dtproperty_mini_fileuploader
+{
+}
+
+.dtproperty_mini_fileuploader .dttoolbar_div
+{
+  margin: 0px;
+}
+
+.dtproperty_mini_fileuploader .T_is_uploaded,
+.dtproperty_mini_fileuploader .T_is_not_uploaded
+{
+  display: none;
+}
+
+.dtproperty_mini_fileuploader .T_status
+{
+  cursor: pointer;
+  padding: 8px 0px 9px 4px;
+}
+
+.dtproperty_mini_fileuploader .T_status_text,
+.dtproperty_mini_fileuploader .T_status_validation_failure,
+.dtproperty_mini_fileuploader .T_status_size
+{
+  display: inline-block;
+}
+
+.dtproperty_mini_fileuploader .T_file_summary
+{
+  display: inline-block;
+}
+
+.dtproperty_mini_fileuploader .T_diagnostics
+{
+  color: gray;
+  padding: 2px;
+  font-style: italic;
+}
+
+.dtproperty_mini_fileuploader .T_details
+{
+  display: none;
+}
+
+.dtproperty_mini_fileuploader .dttoolbar_table
+{
+  width: 100%;
+}
+
+
+.dtproperty_mini_fileuploader .T_progress > .T_progressbar
+{
+  width: 400px;
+}
+.dtproperty_mini_fileuploader .T_progress > .T_progressbar,
+.dtproperty_mini_fileuploader .T_progress > .T_progressval
+{
+  display: inline-block;
+}
+
+.dtproperty_mini_fileuploader .T_status_validation_failure
+{
+  color: red;
+  font-weight: bold; 
+  font-style: italic;
+}
+
+.dtproperty_mini_fileuploader .T_validation_failure
+{
+  background-color: #FFEEEE;
+  color: red;
+  border: 1px solid red;
+  margin-bottom: 2px;
+  font-weight: bold; 
+  font-style: italic;
+  padding: 4px; 
+  display: none;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.dtproperty_mini_fileuploader .T_output.T_status_details
+{
+  display: none;
+}
+
+
+.dtproperty_mini_fileuploader .T_thumbnail
+{
+  cursor: pointer;
+}
+
+.dtproperty_sublist .T_label_value_pair
+{
+  padding-right: 16px;
+}
+
+
+.dtproperty_sublist .T_label_value_pair .label_td.T_before
+{
+  padding-right: 4px;
+}
+
+      
+/* ------------------------------------------------------------- */
+/* hide all the initial values for the JavaScript cascades */
+/* eztask #15556 User settings: cascade the role selection based on the selected portal */
+
+.T_cascading_json_choicelist_initial_value
+{
+  display: none;
+}

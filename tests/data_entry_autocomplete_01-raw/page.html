@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+      
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="X-UA-Compatible" content="IE=10"/>
+<title>Dtack Javascript Validation Harness</title>
+
+<script src="../../jquery/jquery-ui/1.11.1/external/jquery/jquery.js"></script>
+<script src="../../jquery/jquery-ui/1.11.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="../../jquery/jquery-ui/1.11.1/themes/cupertino/jquery-ui.min.css" type="text/css">
+<link rel="stylesheet" href="../../jquery/jquery-ui/1.11.1/themes/cupertino/theme.css" type="text/css">
+<script src="../../jquery/plugins/autogrow/1.0.3/autogrow.js"></script>
+<script src="../host.js"></script>
+
+<script src="../../basic1/environment.js"></script>
+<script src="../../basic1/utility.js"></script>
+<script src="../../basic1/base2.js"></script>
+<script src="../../basic1/ajax2.js"></script>
+<script src="../../basic1/changewatcher.js"></script>
+<script src="../../dom1/scrollable.js"></script>
+<script src="../../dom1/scrollables.js"></script>
+<script src="../../data_entry1/base.js"></script>
+<script src="../../data_entry1/field.js"></script>
+<script src="../../data_entry1/checkbox.js"></script>
+<script src="../../data_entry1/select.js"></script>
+<script src="../../data_entry1/text.js"></script>
+<script src="../../data_entry1/autocomplete.js"></script>
+<script src="../../dyemarkers1/buttons.js"></script>
+<script src="../../select1/dualdown.js"></script>
+<script src="../../select1/dualdowns.js"></script>
+<script src="../../miniwindow1/dialog.js"></script>
+<script src="../../page1/base.js"></script>
+<script src="../../page1/waitix.js"></script>
+<script src="../../menubar1/bar.js"></script>
+<script src="../../ajax1/watcher.js"></script>
+<script src="../../ajax1/issuer.js"></script>
+<script src="../../page1/base_ajax_xml.js"></script>
+<link rel="stylesheet" type="text/css" href="../../css/dtack_environment.css">
+<link rel="stylesheet" type="text/css" href="../../css/dtack_buttons.css">
+<link rel="stylesheet" type="text/css" href="../../css/dttracker.css">
+<link rel="stylesheet" type="text/css" href="../../css/dtack_changewatcher.css">
+<link rel="stylesheet" type="text/css" href="../../css/dtack_data_entry.css">
+<link rel="stylesheet" type="text/css" href="../../css/dtack_icon.css">
+<link rel="stylesheet" type="text/css" href="../../css/dtack_beacon_off.css">
+<link rel="stylesheet" type="text/css" href="../../css/dtack_cleartag.css">
+<link rel="stylesheet" type="text/css" href="../../css/dtack_waitix.css">
+<link rel="stylesheet" type="text/css" href="../../css/dtack_grid.css">
+<link rel="stylesheet" type="text/css" href="../../css/dtack_menubar.css">
+<link rel="stylesheet" type="text/css" href="../../css/dtack_page_messages.css">
+<link rel="stylesheet" type="text/css" href="../../css/dtack_dtproperty.css">
+<link rel="stylesheet" type="text/css" href="../../css/dtack_dtui.css">
+<link rel="stylesheet" type="text/css" href="../../css/dtack_packet.css">
+<link rel="stylesheet" type="text/css" href="../../css/dtack_collapser.css">
+<script src="../page_base.js"></script>
+
+<script language='Javascript'>
+var dtack_environment = new dtack_environment_c();
+dtack_environment.assign_settings_host({});
+dtack_environment.cgis = dtack_environment.parse_cgi(window.location);
+dtack_environment.poke_debug_level(1);
+dtack_environment.debug("dtack_javascript", "global");
+var global_page_object;
+</script>
+
+<script src="../page_base.js"></script>
+<script src="page.js"></script>
+                                                   
+<script>
+var dtphp_url = "http://localhost/13/dtphp";
+
+var dtphp__changewatcher__file_array = [
+  {"name": "C:/13/dtack_javascript/harnesses/data_entry_validation/page.html"}];
+
+  global_page_object = new page_c(dtack_environment);
+
+$(document).ready(function() {global_page_object.initialize();});
+$(document).ready(function() {global_page_object.activate();});
+</script>
+
+<link rel="stylesheet" href="styles.css" type="text/css">
+<style type="text/css">
+.T_pair 
+{
+  margin: 8px;
+}
+
+.T_pair > .T_label,
+.T_pair > .T_value
+{
+  display: inline-block;
+  vertical-align: top;
+}
+</style>
+
+<div class="page_title">Data Entry Autocomplete (Raw)</div>
+
+<div class="T_pair">
+  <div class="T_label">autocomplete:</div>
+  <div class="T_value">
+    <input 
+      type="text"
+      name="text1_autocomplete"
+      id="text1_autocomplete"
+      class="dtproperty_required dtproperty_textbox"
+      value=""
+      data-dtproperty-input_composer_cssclass_invalid="dtproperty_invalid"
+      data-dtproperty-validator="nonblank"
+      data-dtproperty-validator_specification=""
+      data-dtproperty-storage_formatter="string"
+      data-dtproperty-storage_default="">
+      
+<div class="dtack_dtproperty T_autocomplete_submittable">
+<input type="text" id="text1" name="text1" value="">
+</div>
+
+    </div>  
+  </div>
+</div>
+
+</head>
+
+<body id="projx_body" class="projx_body">
+<form name="post_form" method="post" action="" ENCTYPE="multipart/form-data">
+</form>
+
+<div id="dtack_environment_debug_container" class="dtack_environment_debug_container">
+  <div id="dtack_environment_debug_message" class="dtack_environment_debug_div"></div>
+</div>
+
+</body>
+</html>
+
+

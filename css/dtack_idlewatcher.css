@@ -1,0 +1,79 @@
+/* these are styles for the idlewatcher in dtack_javascript */
+/* watchfrog #177 */
+
+DIV.dtack_idlewatcher_container {
+  position: fixed;
+  top: 4px;
+  left: 160px;
+  z-index: 2002;
+  border: 2px solid #CCAACC;
+  background-color: white;
+  padding: 4px;
+  color: black;
+  font-size: 9px;
+  max-width: 640px;
+  max-height: 800px;
+  overflow: auto;
+  background-color: #FFEEFF;
+}
+
+DIV.dtack_idlewatcher_container A,
+DIV.dtack_idlewatcher_container DIV,
+DIV.dtack_idlewatcher_container {
+  font-size: 10px;
+  font-family: Verdana;
+  line-height: normal;
+}
+
+DIV.dtack_idlewatcher_container ._status {
+  color: red;
+}
+
+DIV.dtack_idlewatcher_container ._minimized,
+DIV.dtack_idlewatcher_container ._normal {
+  display: inline-block;
+}
+
+DIV.dtack_idlewatcher_container ._normal {
+  min-width: 208px;
+}
+
+DIV.dtack_idlewatcher_container ._normal_button,
+DIV.dtack_idlewatcher_container ._minimize_button {
+  width: 9px;
+  height: 9px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+DIV.dtack_idlewatcher_container ._normal_button {
+  background-image: url(dtack_idlewatcher_plus.gif);
+}
+DIV.dtack_idlewatcher_container ._minimize_button {
+  background-image: url(dtack_idlewatcher_minus.gif);
+}
+
+DIV.dtack_idlewatcher_container ._title {
+  font-weight: bold;
+}
+
+DIV.dtack_idlewatcher_container ._title,
+DIV.dtack_idlewatcher_container ._watching,
+DIV.dtack_idlewatcher_container ._buttons {
+  display: inline-block;
+}
+
+DIV.dtack_idlewatcher_container ._button {
+  color: blue;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+DIV.dtack_idlewatcher_modal {
+  display: none;
+}
+
+DIV.dtack_idlewatcher_modal ._message {
+  padding: 16px;
+}

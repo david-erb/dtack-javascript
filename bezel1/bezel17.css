@@ -1,0 +1,60 @@
+.dtack_bezel_container {}
+
+.dtack_bezel17_table {
+  width: 100%; 
+  height: 100%; 
+  margin: 0px; 
+  padding: 0px; 
+/* you can set the background color to show cracks in the slicing */
+/* background-color: #FFDDDD; */
+}
+
+.dtack_bezel17_top_left_corner,
+.dtack_bezel17_top_left,
+.dtack_bezel17_top_middle,
+.dtack_bezel17_top_right,
+.dtack_bezel17_top_right_corner,
+.dtack_bezel17_left_top,
+.dtack_bezel17_middle,
+.dtack_bezel17_right_top,
+.dtack_bezel17_left_middle,
+.dtack_bezel17_right_middle,
+.dtack_bezel17_left_bottom,
+.dtack_bezel17_right_bottom,
+.dtack_bezel17_bottom_left_corner,
+.dtack_bezel17_bottom_left,
+.dtack_bezel17_bottom_middle,
+.dtack_bezel17_bottom_right,
+.dtack_bezel17_bottom_right_corner {padding: 0px; margin: 0px; vertical-align: top;}
+
+.dtack_bezel17_side_table {height: 100%;}
+.dtack_bezel17_top_left_corner {}
+.dtack_bezel17_top_left {}
+.dtack_bezel17_top_middle {width: 100%;}
+.dtack_bezel17_top_right {}
+.dtack_bezel17_top_right_corner {}
+.dtack_bezel17_left_top {}
+.dtack_bezel17_middle {width: 100%; height: 100%;}
+.dtack_bezel17_right_top {}
+.dtack_bezel17_left_middle {height: 100%;}
+.dtack_bezel17_right_middle {height: 100%;}
+.dtack_bezel17_left_bottom {vertical-align: bottom;}
+.dtack_bezel17_right_bottom {vertical-align: bottom;}
+.dtack_bezel17_bottom_left_corner {}
+.dtack_bezel17_bottom_left {}
+.dtack_bezel17_bottom_middle {width: 100%;}
+.dtack_bezel17_bottom_right {}
+.dtack_bezel17_bottom_right_corner {}
+
+.dtack_bezel17_top_middle_class,
+.dtack_bezel17_bottom_middle_class 
+{
+/*
+  position: relative; 
+  top: -100%; left: 0px; 
+*/
+  text-align: center; 
+  white-space: nowrap; 
+  overflow: hidden;
+  display: none;
+}

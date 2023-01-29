@@ -1,0 +1,138 @@
+
+/* --------------------------------------------------------------------------------------------*/
+/* dtgrid object styles */
+
+.dtgrid_table, .dttoolbar_div {
+margin: 0px 10px 0px 10px;
+}
+
+.dtgrid_sortbutton_a,
+.dtgrid_sortbutton_current_a {
+     text-decoration: none;
+}
+
+.dtgrid_sortbutton_current_a {
+     color: red;
+}
+
+.dtgrid_sortbutton_a:hover,
+.dtgrid_sortbutton_current_a:hover {
+     text-decoration: none;
+    background-color: yellow;
+}
+
+.dtgrid_gutter_td {
+    display: none;
+}
+
+.dtgrid_header_tr {
+}
+                                                  /* dual rotating row styles */
+.dtgrid_rotating0_tr 
+{
+}
+.dtgrid_rotating1_tr 
+{
+  background-color: #EEEEEE;
+}
+
+.dtgrid_rotating0_tr.T_inaccessible > TD,
+.dtgrid_rotating1_tr.T_inaccessible > TD
+{
+  color: gray;
+  font-style: italic;
+}
+
+
+.dtgrid_header_td A {color: #303090;}
+
+.dtgrid_header_td,
+.dtgrid_icon_th {
+  font-size: 12px;
+    background-color: #BAD8F2;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+    vertical-align: bottom;
+    text-align: left;
+    border-bottom: 2px solid black;
+} 
+
+.dtgrid_header_div 
+{
+  text-transform: capitalize;
+                                        /* support the scortablize method on widgets grids which append the sort icon after this */
+  display: inline-block;
+}
+
+.dtgrid_data_td {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+    vertical-align: top;
+    white-space: normal;
+}
+
+.dtgrid_data_td.T_integer
+{
+  padding-right: 32px;
+  text-align: right;
+}
+                                 
+.dtgrid_icon_th 
+{
+  text-align: center;
+}
+
+.dtgrid_icon_td 
+{
+    padding-top: 0px;
+    padding-bottom: 4px;
+    padding-left: 0px;
+    padding-right: 0px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.dtgrid_icon_td 
+{
+    padding-top: 0px;
+    padding-bottom: 4px;
+    padding-left: 0px;
+    padding-right: 0px;
+    vertical-align: top;
+    text-align: center;
+}
+
+
+/* -------------------------------------------------------------------------- */
+.dtack_javascript__grid__column_checkboxes
+{
+}
+
+.dtack_javascript__grid__column_checkboxes.T_head
+{
+}
+
+.dtack_javascript__grid__column_checkboxes.T_head > .T_all
+{
+  display: inline-block;
+  cursor: pointer;
+  color: blue;
+  padding-right: 8px;
+}
+
+.dtack_javascript__grid__column_checkboxes.T_head > .T_none
+{
+  display: inline-block;
+  cursor: pointer;
+  color: blue;
+  text-align: right;
+}
+
+.dtack_javascript__grid__column_checkboxes.T_data
+{
+}
+

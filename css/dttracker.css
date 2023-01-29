@@ -1,0 +1,185 @@
+/* styles used by the function group */
+.dttracker1,
+.dttracker2,
+.dttracker3 {
+  color: #600000;
+  font-size: 10px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.dttracker2 {
+  color: #A02020;
+}
+.dttracker_purpose_span {
+  color: #202020;
+  font-weight: 900;
+}
+.dttracker_table {
+  background-color: #F4DCDC;
+  width: 100%;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* go back to table format for tracker html rendering and include stopwatch absolute and elapsed */
+/* watchfrog #339 */
+.dttracker_table TD {padding: 2px 4px 2px 4px; vertical-align: top; font-size: 10px;}
+.dttracker_table .relative,
+.dttracker_table .absolute {text-align: right; padding-right: 4px;}
+
+.dyemarker 
+{
+  color: white; 
+  background-color: #800088; 
+  font-weight: bold; 
+  cursor: pointer; 
+  display: inline-block; 
+  padding: 2px 2px 2px 2px;
+}
+
+
+.dyemarker.T_LIFECYCLE 
+{
+  color: black; 
+  background-color: yellow;
+}
+
+.dyemarker.T_AUTHD 
+{
+  color: white; 
+  background-color: #000088;
+}
+
+.dyemarker.T_CONDITION 
+{
+  color: black;
+  background-color: cyan;
+}
+
+.dyemarker.T_IINSTANCE 
+{
+  color: white; 
+  background-color: black;
+}
+
+.dyemarker.T_CAUGHT 
+{
+  color: white; 
+  background-color: #CC0000;
+}
+
+.dyemarker.T_SFULFILL 
+{
+  color: white; 
+  background-color: #00AA00;
+}
+
+.dyemarker.T_LIST 
+{
+  color: white; 
+  background-color: #00C0FF;
+}
+
+.dyemarker.T_WFACT
+{
+  color: white; 
+  background-color: #90A040;
+}
+
+.dyemarker.T_TABULARIUM
+{
+  color: white; 
+  background-color: #AD6322;
+}
+
+.dyemarker.T_BRULE 
+{
+  color: white;
+  background-color: #F48C4C;
+}
+
+.dyemarker.T_UNDYED 
+{
+  color: black;
+  background-color: #F4DCDC;
+}
+
+#dtack_dyemarker_buttons > .T_control
+{
+  color: black; 
+  border: 1px solid black;
+  background-color: white;
+  text-decoration: none;
+}
+
+.dyemarker.T_empty {visibility: hidden;}
+
+#dtack_dyemarker_buttons > .T_button,
+#dtack_dyemarker_buttons > .T_control
+{
+  font-size: 9px;
+  display: inline-block;
+  margin: 4px 2px 4px 2px;
+  cursor: pointer;                                        
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+#dtack_dyemarker_buttons > .T_button
+{
+  text-decoration: underline;
+  border: 1px solid black;
+}
+
+#dtack_dyemarker_buttons > .T_button.T_hiding
+{
+  text-decoration: none;
+}
+
+
+.dttracker_table XMP
+{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: blue;
+}
+
+.dttracker_dreasons
+{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: blue;
+}
+.dttracker_dreasons .T_level
+{
+  margin-left: 32px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.dttracker_dreasons .T_level .T_line.T_FAIL
+{
+  color: magenta;
+}
+.dttracker_dreasons .T_level .T_line.T_no_scalars
+{
+  display: none;
+}
+/* first reasons block inside a grid td, don't indent so much */
+.dtgrid_data_td > .dttracker_dreasons .T_level
+{
+  margin-left: 0px;
+}
+
+/* --------------------------------------------------------------------------------------------*/
+/* the tohtml base method */
+.tohtml_table {
+   margin-top: 24px;
+	background-color: #E9FFCA;
+	color: #2A4600;
+	border: 1px solid #2A4600;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.tohtml_td {
+   font-size: 10px;
+	vertical-align: top;
+	padding-left: 4px;
+	padding-right: 4px;
+
+}

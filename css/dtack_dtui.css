@@ -1,0 +1,135 @@
+
+/* make the input error not get so vertically stacked to the right of the input area */
+/* eztask #9324: login username must be guaranteed unique */
+.dtui_input_regions_table {width: 100%;}
+.dtui_input_regions_prompt_td {white-space: nowrap;}
+.dtui_input_regions_input_td {width: 100%;}
+
+/* --------------------------------------------------------------------------------------------*/
+/* default styles used by the dtui_input_regions_c class */
+.dtui_input_regions_table {
+  padding: 10px;
+
+}
+.dtui_input_regions_prompt_td {
+    text-align: right;
+    font-weight: bold;
+    border: none;
+    margin-top: 8px;
+    padding: 8px;
+    white-space: nowrap;
+    vertical-align: baseline;
+}
+
+.dtui_input_regions_input_td {
+    border: none;
+    margin-top: 8px;
+    padding: 8px;
+    /* vertical-align: baseline; */
+}
+                        /* cell containing space between the rows */
+
+.dtui_input_regions_gutter_td {
+}
+                        /* contents of the cell space between the rows */
+.dtui_input_regions_gutter_div {
+}
+
+
+.dtui_input_regions_prompt_td > A,
+.dtui_input_regions_prompt_td > A:hover
+{
+  color: inherit;
+  font-weight: bold;
+}
+
+
+.dtui_xregions_label_div
+{
+  font-weight: bold;
+}
+
+DIV.dtui_xregions_group_div 
+{
+  padding-right: 4px;
+  padding-bottom: 4px;
+}
+
+TD.dtui_xregions_label_div
+{
+  vertical-align: top;
+}
+
+
+/* javascript does an addClass for these */
+/* this makes the label TD align better when the corresponding value TD */
+
+/* dtui regions (older) */
+.dtui_input_regions_prompt_td.T_prompt_for_textbox
+{
+  padding-top: 16px;
+}
+
+.dtui_input_regions_prompt_td.T_prompt_for_pulldown
+{
+  padding-top: 14px;
+}
+
+.dtui_input_regions_prompt_td.T_prompt_for_sublist
+{
+  padding-top: 16px;
+}
+
+
+
+/* dtui xregions (newer) */
+.dtui_xregions_label_div.T_prompt_for_textbox
+{
+  padding-top: 6px;
+}
+
+.dtui_xregions_label_div.T_prompt_for_pulldown
+{
+  padding-top: 6px;
+}
+
+.dtui_xregions_label_div.T_prompt_for_radios
+{
+  padding-top: 4px;
+}
+
+.dtui_xregions_label_div.T_prompt_for_checkboxes
+{
+  padding-top: 4px;
+}
+
+.dtui_xregions_label_div.T_prompt_for_sublist
+{
+  padding-top: 6px;
+}
+
+.dtui_xregions_label_div.T_prompt_for_limitgroup
+{
+  padding-top: 6px;
+}
+
+/* --------------------------------------------------------------------------------------------*/
+.dtui_output_regions_table
+{
+}
+
+.dtui_output_regions_table .dtui_input_regions_prompt_td,
+.dtui_output_regions_table .dtui_input_regions_input_td
+{
+  padding-top: 8px;
+}
+
+.dtui_output_regions_table .dtui_input_regions_prompt_td
+{
+  
+}
+
+.dtui_output_regions_table .dtui_input_regions_input_td
+{
+  border: none;
+}

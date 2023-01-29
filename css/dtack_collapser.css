@@ -1,0 +1,47 @@
+
+.dtack_collapsible.T_with_icon 
+{
+  background-image: url('dtack_collapser_minus.gif');
+  background-repeat: no-repeat;
+  background-position: left center;
+  cursor: pointer;
+  padding-left: 12px;
+}
+
+.dtack_collapsible.T_with_icon.T_is_collapsed
+{
+  background-image: url(dtack_collapser_plus.gif);
+}
+
+.dtack_collapsible.T_clickbar
+{
+  background-color: #404040;
+  color: white;
+  font-weight: bold;
+  margin: 2px;
+  padding: 2px;
+  padding-left: 16px;
+  background-image: url('dtack_collapser_minus.gif');
+  background-repeat: no-repeat;
+  background-position: left+4px center;
+  cursor: pointer;
+}
+
+.dtack_collapsible.T_contents
+{
+  margin: 2px;
+  margin-left: 16px;
+  padding: 2px;
+}
+
+.dtack_collapsible.T_clickbar.T_is_collapsed
+{
+  background-color: #C8C8C8;
+  background-image: url(dtack_collapser_plus.gif);
+}
+
+.dtack_collapsible.T_contents.T_is_collapsed
+{
+  display: none;
+}
+      

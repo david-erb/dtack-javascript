@@ -1,0 +1,178 @@
+
+/* this aligns and spaces the icon nicely in the toolbar button for IE and FF */
+A.dttoolbar_button IMG.dtack_icon.T_image {
+  vertical-align: middle;
+  padding-right: 4px;
+  display: inline-block;
+  border: none;
+}                                              
+A.dttoolbar_button SPAN {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* this adds a mouse-over indicator to the icons buttons when not in toolbar buttons */
+A.dtack_icon.T_button.T_anchor_background {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-position: 1px 1px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  vertical-align:text-bottom;
+}
+
+A.dtack_icon.T_button.T_anchor_background:focus {
+  outline: 0
+}
+
+A.dtack_icon.T_button.T_anchor_background:hover 
+{
+  background-color: #88CCEE;
+}
+
+
+DIV.dtack_icon.T_buttonset_button .T_label
+{
+  display: inline-block;
+}
+
+DIV.dtack_icon.T_buttonset_button.T_active
+{
+  border: 1px solid red;
+}
+
+
+
+
+
+.dtack_icon_text_to_right,
+.dtack_icon_text_inside
+{
+  text-align: center;
+  font-weight: bold;
+  font-size: 9px;
+}
+
+/* add option to give a number next to a clickable icon */
+.dtack_icon_text_to_right
+{
+  padding-left: 2px;
+  display: inline-block;
+}
+
+.clickable_icon_button,
+.clickable_icon_div,
+.clickable_icon_with_number_in_div {
+  padding: 2px 10px 2px 2px;
+  cursor: pointer; 
+  text-align: center;
+  font-weight: bold;
+  font-size: 9px;
+  border: none;
+  line-height: 16px; 
+  width: 16px; 
+  height: 16px;
+  background-repeat: no-repeat;
+}
+
+.clickable_icon_div,
+.clickable_icon_with_number_in_div {
+  background-repeat: no-repeat;
+  border-right: solid #d7d7d7 2px;
+  border-bottom: solid #d7d7d7 2px;
+  border-top: solid #f7f7f7 2px;
+  border-left: solid #f7f7f7 2px;
+}
+
+.clickable_icon_div 
+{
+                                        /* slide the image over under the padding */
+                                        /* watchfrog #180 */
+  background-position: 2px 2px;
+  padding: 2px 2px 2px 2px;
+  display: inline-block;
+  vertical-align: middle;
+
+}
+
+.clickable_icon_button
+{
+  background-position: 4px 4px;
+  border: 1px solid #404044;
+}
+
+.clickable_icon_div.T_fugue_32_pngs
+{
+  width: 32px;
+  height: 32px;
+}
+
+.clickable_icon_div.T_orange 
+{
+  background-color: orange;
+}
+
+.clickable_icon_div._inline_block,
+.clickable_icon_div.T_inline_block {display: inline-block;}
+
+.clickable_icon_div:hover,
+.clickable_icon_with_number_in_div:hover,
+.clickable_icon_div.T_orange :hover 
+{
+  background-color: yellow;
+}
+
+.compose_clickable_icon_with_value_by_it {
+  padding: 2px 5px 2px 5px;
+  cursor: pointer; 
+  font-weight: bold;
+  font-size: 9px;
+  line-height: 16px; 
+  width: 36px; 
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: 2px 2px;
+  border-right: solid #d7d7d7 2px;
+  border-bottom: solid #d7d7d7 2px;
+  border-top: solid #f7f7f7 2px;
+  border-left: solid #f7f7f7 2px;
+}
+
+.compose_clickable_icon_with_value_by_it SPAN {
+  padding-left: 18px;
+  padding-right: 5px;
+  
+}
+
+.compose_clickable_icon_with_value_by_it:hover {background-color: #99ff66;}
+
+.compose_clickable_icon_infected
+{
+  background-color: #FFCCCC;
+  border-right: solid #989898 2px;
+  border-bottom: solid #777777 2px;
+  border-top: solid #f7f7f7 2px;
+  border-left: solid #f7f7f7 2px;
+}
+
+.clickable_icon_div.T_disabled 
+{
+  border: 2px solid transparent;
+  cursor: default;
+
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+
+  /* IE 5-7 */
+  filter: alpha(opacity=30);
+
+  /* Netscape */
+  -moz-opacity: 0.3;
+
+  /* Safari 1.x */
+  -khtml-opacity: 0.3;
+
+  /* Good browsers */
+  opacity: 0.3;
+}

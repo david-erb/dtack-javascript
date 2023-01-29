@@ -1,0 +1,19 @@
+
+.dtack_cleartag_replacement_error
+{
+  background-image: url("dtack_cleartag_replacement_error.gif");
+  width: 88px;
+  height: 23px;
+  cursor: pointer;
+}
+
+
+.dtack_cleartag_canary_link
+{
+  background-image: url("dtack_cleartag_canary_link.png");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  display: inline-block;
+}

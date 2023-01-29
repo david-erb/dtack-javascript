@@ -1,0 +1,52 @@
+TABLE.dtack_packet 
+{
+}
+TABLE.dtack_packet > TBODY > TR
+{
+}
+TABLE.dtack_packet > TBODY > TR > TD
+{
+  vertical-align: baseline;
+  padding: 2px;
+}
+TABLE.dtack_packet > TBODY > TR > TD.packet_name.label
+{
+  font-weight: bold;
+  font-style:normal;
+}
+TABLE.dtack_packet > TBODY > TR > TD.label
+{
+  font-style: italic;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* classes for packet to allow it to render as nicely formatted html */
+TABLE.dtack_packet {
+}
+
+TABLE.dtack_packet TD {
+  background-color: #F4F4FF;
+  vertical-align: top;
+  padding: 4px;
+  border-left: 1px solid silver;
+  border-right: 1px solid silver;
+  border-bottom: 1px solid silver;
+}
+
+TABLE.dtack_packet TD.first {
+  border-top: 1px solid silver;
+}
+
+TABLE.dtack_packet TD.label .first {
+  border-left: 1px solid silver;
+  border-top: 1px solid silver;
+}
+
+TABLE.dtack_packet TD.value {
+  border-left: none;
+}
+
+TABLE.dtack_packet TD.packet_name {
+  background-color: #E4E4EF;
+  font-weight: bold;
+}

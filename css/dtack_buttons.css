@@ -1,0 +1,116 @@
+/* #6E98B0 navigate background color */
+/* #F5FBDE grid header color */
+/* #F5FBDE input region background color */
+/* #303090 anchor link color */
+/* #215121 anchor link in grid header color */
+/* #EEEEEE rotating grid rows color */
+/* toolbar button background-color: #C3E9DA; */
+/* toolbar button border: 1px solid #BBBBB8; */
+
+/* --------------------------------------------------------------------------------------------*/
+/* this gives more less space inside the jquery buttons */
+.ui-button-text-only, .ui-button-text {padding: 0px;}
+.ui-button-text-only IMG, .ui-button-text IMG {padding-right: 4px; vertical-align: middle;}
+
+/* --------------------------------------------------------------------------------------------*/
+.prefix_png {border: none; vertical-align: -16%; width: 16px; height: 16px;}
+
+.grid_png {border: 2px solid white; vertical-align: -16%; width: 16px; height: 16px;}
+.dtgrid_rotating1_tr .grid_png {border: 2px solid #EEEEEE;}
+.grid_png:hover {border: 2px solid #AAAAFF;}
+                                             /* --------------------------------------------------------------------------------------------*/
+/* toolbar things */
+
+.dttoolbar_prestyle_div {
+    margin-top: 10px;
+}
+
+/* for buttons which are in a standard dtoolbar table, don't align in columns and reduce spacing between */
+.dttoolbar_div > .dttoolbar_table TD.dttoolbar_td
+{
+  display: inline-block;
+  padding: 0px;
+}
+
+.dttoolbar_div {
+  margin-bottom: 0px;
+}
+.dttoolbar_table {
+}
+
+.dttoolbar_td {
+  vertical-align: top;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.dttoolbar_button_icon {
+    padding: 0px;
+    margin: 0px;
+    xpadding-left: 4px;
+    xpadding-right: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+    line-height: 20px;
+    margin-top: 2px;
+    xvertical-align: middle;
+xposition: relative;
+xtop: 2px;
+}
+
+.dttoolbar_button:hover {
+  background-color: #FDE5A9;
+}
+
+.dttoolbar_td A:visited {
+}
+
+.dttoolbar_button {
+    Xmin-width: 130px;
+    Xwidth: 130px;
+    Xbackground-color: #FED264;
+    Xborder: 1px solid #404044;
+    white-space: nowrap;
+    display: table-cell;
+}
+
+.dttoolbar_td
+ {
+   margin: 2px 2px 2px 2px;
+}
+
+.dttoolbar_button 
+{
+   margin: 2px 2px 2px 2px;
+}
+
+.dttoolbar_td A,
+.dttoolbar_button {
+    white-space: nowrap;
+    Xpadding: 4px 16px 4px 16px;
+}
+
+/* a couple projx pages are not dttoolbar-ized and use button_a for their class */
+A.button_a {color: blue; text-decoration: none; font-weight: bold;}
+
+/* don't underline the text labels inside the toolbar buttons */
+.dttoolbar_button {text-decoration: none;}
+
+/* --------------------------------------------------------------------------------------------*/
+
+
+/* --------------------------------------------------------------------------------------------*/
+/* this adjusts the icons in the dtphp dttoolbar-generated buttons to look good with the jquery ui button-izing */
+/* thanks to http://web.archive.org/web/20110721191046/http://particletree.com/features/rediscovering-the-button-element/ */
+
+/* taken out in favor of the above
+.dttoolbar_button IMG, BUTTON IMG {
+    margin:0 3px -3px 0;
+    padding:0;
+    border:none;
+    width:16px;
+    height:16px;
+}
+*/

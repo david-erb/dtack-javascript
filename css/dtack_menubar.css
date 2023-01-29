@@ -1,0 +1,74 @@
+
+
+/* --------------------------------------------------------------------------------------------*/
+
+.dtack_menubar_bar .T_menu UL
+{
+  border: 2px solid silver;
+  padding: 2px;
+}
+
+.dtack_menubar_bar .T_menu .T_standard_font,
+.dtack_menubar_bar .T_menu A
+{
+  display: inline-block;
+  margin: 8px;
+}
+
+
+/* --------------------------------------------------------------------------------------------*/
+.dtack_menubar_bar
+{
+}
+
+.dtack_menubar_bar .T_primary
+{
+  display: inline-block;
+  padding: 4px 16px 4px 16px;
+  cursor: pointer;
+  border-left: 4px solid black;
+}
+
+.dtack_menubar_bar .T_primary:first-child
+{
+  border-left: none;
+}
+
+.dtack_menubar_bar .T_primary .T_label
+{
+  font-weight: bold;
+  padding: 2px;
+}
+
+.dtack_menubar_bar .T_menu
+{
+  display: none;
+}
+
+.dtack_menubar_bar .T_menu UL
+{
+}
+
+
+.dtack_menubar_bar .T_menu LI
+{
+}
+
+.dtack_menubar_bar .ui-menu
+{
+  font-weight: bold;
+}
+
+
+.dtack_menubar_bar .T_extra
+{
+  padding-left: 64px;
+  display: inline-block;
+}
+
+
+.dtack_menubar_bar .T_label A.T_disabled
+{
+  color: gray;
+  cursor: default;
+}

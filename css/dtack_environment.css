@@ -1,0 +1,143 @@
+
+DIV#dtack_environment_debug_bottom_container.T_independently_scrollable
+{
+  overflow: scroll;
+}
+
+DIV.dtack_environment_debug_div {
+  text-align: left;
+  font-size: 9px; 
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  background-color: #EEEEFF; 
+  white-space: nowrap;
+  line-height: normal;
+  display: none;
+}
+
+.dtack_environment_debug_div DIV.start_milliseconds,
+.dtack_environment_debug_div DIV.since_milliseconds,
+.dtack_environment_debug_div DIV.location,
+.dtack_environment_debug_div DIV.message {
+  display: inline-block;
+  font-size: 9px;         
+  margin-top: 2px; margin-bottom: 2px;
+}
+
+.dtack_environment_debug_div DIV.start_milliseconds {
+}
+
+.dtack_environment_debug_div DIV.start_milliseconds,
+.dtack_environment_debug_div DIV.since_milliseconds {
+  min-width: 48px;
+  text-align: right;
+}
+
+.dtack_environment_debug_div DIV.location,
+.dtack_environment_debug_div DIV.message {
+}
+
+.dtack_environment_debug_div DIV.location {
+  color: gray;
+}
+
+.dtack_environment_debug_div DIV.start_milliseconds,
+.dtack_environment_debug_div DIV.since_milliseconds,
+.dtack_environment_debug_div DIV.location {
+  margin-right: 4px;
+}
+
+.dtack_environment_state_div {
+  font-size: 9px; 
+  z-order: 10000; 
+  position: absolute; 
+  left: 1000px; 
+  top: 0px; 
+  font-size: 8px; 
+  color: #444444;
+}
+
+
+
+
+/* -----------------------------------------------------------*/
+.dtack_environment.T_tableschema
+{
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.dtack_environment.T_tableschema .T_option
+{
+}
+
+.dtack_environment.T_tableschema .T_option.T_label
+{
+  margin-left: 2px;
+  margin-right: 2px;
+  display: inline-block;
+  padding: 1px 3px 2px 3px;
+  vertical-align: baseline;
+  border-radius: 3px;
+  cursor: pointer;
+}               
+.dtack_environment.T_tableschema .T_option.T_view_only
+{
+  font-style: italic;
+}
+.dtack_environment.T_tableschema .T_option.T_is_config
+{
+  background-color: orange;
+}
+.dtack_environment.T_tableschema .T_option.T_is_log
+{
+  background-color: tan;
+}
+
+.dtack_environment.T_tableschema .T_option.T_is_smartsync
+{
+  background-color: lightblue;
+}
+
+.dtack_environment.T_tableschema .T_option.T_is_lookup
+{
+  background-color: pink;
+}
+                                                  
+.dtack_environment.T_tableschema .T_option.T_is_enduser
+{
+  background-color: lightgreen;
+}
+
+.dtack_environment.T_tableschema .T_option.T_is_mailswarm
+{
+  background-color: yellow;
+}
+                      
+/* -----------------------------------------------------------*/
+.debug_and_echo_container_div
+{
+}
+
+.debug_and_echo_container_div > .T_profile
+{
+  background-color: #FFFF88;
+  padding: 4px;
+}
+
+.debug_and_echo_container_div > .T_profile .T_header
+{
+  font-weight: bold;
+}
+
+.debug_and_echo_container_div > .T_profile TD
+{
+  padding-right: 8px;
+}
+
+.debug_and_echo_container_div > .T_profile .T_number
+{
+  text-align: right;
+  padding-right: 16px;
+}
+
+

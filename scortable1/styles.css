@@ -1,0 +1,42 @@
+
+.dtack_javascript__scortable_column
+{
+  white-space: nowrap;
+}                           
+
+.dtack_javascript__scortable_column > .T_scortable_icon
+{
+  width: 16px; 
+  height: 16px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: inline-block;
+}                   
+
+.dtack_javascript__scortable_column > .T_scortable_icon:hover
+{
+  background-color: yellow;
+}
+
+.dtack_javascript__scortable_column > .T_scortable_icon.T_ascending
+{
+  background-position: 0px 4px;
+  background-image: url(control-090-small.png);
+}                   
+                                                                         
+
+.dtack_javascript__scortable_column > .T_scortable_icon.T_descending
+{
+  background-position: 0px 4px;
+  background-image: url(control-270-small.png);
+}                   
+
+        
+
+.dtack_javascript__scortable_column > .T_scortable_icon.T_unsorted
+{
+  background-position: 0px 4px;
+  background-image: url(control-stop-square-small.png);
+}                   
+
+        

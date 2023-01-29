@@ -1,0 +1,34 @@
+
+.dtack_javascript__allnone_column
+{
+  white-space: nowrap;
+}                           
+
+.dtack_javascript__allnone_column > .T_allnone_icon
+{
+  width: 16px; 
+  height: 16px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: inline-block;
+}                   
+
+.dtack_javascript__allnone_column > .T_allnone_icon:hover
+{
+  background-color: yellow;
+}
+
+.dtack_javascript__allnone_column > .T_allnone_icon.T_all
+{
+  background-position: 0px 2px;
+  background-image: url(ui-check-box.png);
+}                   
+                                                                         
+
+.dtack_javascript__allnone_column > .T_allnone_icon.T_none
+{
+  background-position: 0px 2px;
+  background-image: url(ui-check-box-uncheck.png);
+}                   
+                                                   
+        

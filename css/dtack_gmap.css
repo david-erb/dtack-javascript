@@ -1,0 +1,244 @@
+.dtack_gmap.T_map
+{
+  height: 100%;
+  box-shadow: 0px 0px 10px #888888;
+}
+
+.dtack_gmap.T_edit .T_dashboard_and_legend
+{
+}
+
+.dtack_gmap.T_styles_legend
+{
+}
+
+.dtack_gmap.T_styles_legend .T_style
+{
+  padding: 2px;
+  vertical-align: middle;
+}
+
+.dtack_gmap.T_styles_legend .T_style INPUT
+{
+  position: relative;
+  top: 4px;
+}
+
+.dtack_gmap.T_styles_legend .T_style .T_label 
+{
+  padding-left: 4px;
+  display: inline-block;
+}
+
+/* eztask #13491: fix style for project map legend icon (should not have border) for Project Features */
+.dtack_gmap.T_styles_legend .T_style .T_icon 
+{
+  padding-right: 2px;
+  padding-left: 2px;
+  display: inline-block;
+  width: 16px;
+}
+
+.dtack_gmap.T_edit TABLE.T_dashboard_and_legend > TBODY > TR > TD
+{
+  vertical-align: top;
+}
+
+.dtack_gmap.T_edit .T_dashboard > TABLE > TBODY > TR > TD
+{
+  vertical-align: top;
+}
+
+.dtack_gmap.T_edit .T_dashboard .T_toolbar.T_vertical > .T_tool
+{
+  display: block;
+}
+
+.dtack_gmap.T_edit .T_dashboard .T_toolbar.T_vertical > .T_tool
+{
+  margin-bottom: 8px;
+}
+
+
+.dtack_gmap.T_edit .T_dashboard .T_tool.T_shape.T_current
+{
+  border-color: red;
+}
+
+.dtack_gmap.T_edit .T_dashboard .T_tool.T_shape.T_unavailable
+{
+  display: none;
+}
+
+.dtack_gmap.T_edit .T_dashboard .T_tool.T_shape.T_marker
+{
+  background-image: url(../fugue_pngs/layer-mask.png);
+}
+
+.dtack_gmap.T_edit .T_dashboard .T_tool.T_shape.T_rectangle
+{
+  background-image: url(../fugue_pngs/layer-shape.png);
+}
+
+.dtack_gmap.T_edit .T_dashboard .T_tool.T_shape.T_circle
+{
+  background-image: url(../fugue_pngs/layer-shape-ellipse.png);
+}
+
+.dtack_gmap.T_edit .T_dashboard .T_tool.T_shape.T_polyline
+{
+  background-image: url(../fugue_pngs/layer-shape-polyline.png);
+}
+
+.dtack_gmap.T_edit .T_dashboard .T_tool.T_shape.T_polygon
+{
+  background-image: url(../fugue_pngs/layer-shape-polygon.png);
+}
+
+
+.dtack_gmap.T_edit .T_dashboard .T_tool.T_draw {background-image: url(../fugue_pngs/paint-brush.png);}
+
+.dtack_gmap.T_edit .T_dashboard .T_tool.T_remove {background-image: url(../fugue_pngs/paint-brush--minus.png);}
+
+.dtack_gmap.T_edit .T_dashboard .T_tool.T_apply {background-image: url(../fugue_pngs/hammer.png);}
+
+.dtack_gmap.T_edit .T_dashboard .T_tool.T_done {background-image: url(../fugue_pngs/navigation-180-button.png);}
+
+.dtack_gmap .T_tool.T_zoom_fit {background-image: url(../fugue_pngs/magnifier-zoom-fit.png);}
+                                                                            
+
+.dtack_gmap.T_perimeter .T_features_attributes
+{
+  white-space: nowrap;
+}
+
+
+.dtack_gmap.T_edit .T_dashboard .T_doing
+{
+}
+
+.dtack_gmap.T_edit .T_dashboard .T_doing .T_primitive_type
+{
+  color: red;
+}
+
+.dtack_gmap.T_edit .T_dashboard .T_doing .T_real_world_descriptor
+{
+  font-weight: bold;
+}
+
+.dtack_gmap.T_edit .T_dashboard .T_doing .T_instruction
+{
+  font-style: italic;
+}
+
+.dtack_gmap.T_edit .T_gis_features .T_feature
+{
+  margin-bottom: 4px;
+  vertical-align: middle;
+}
+
+.dtack_gmap.T_edit .T_gis_features .T_feature.T_included
+{
+  border: 1px solid black;
+}
+
+.dtack_gmap.T_edit .T_gis_features .T_feature.T_excluded
+{
+  border: 1px solid white;
+}
+
+.dtack_gmap.T_edit .T_gis_features .T_feature .T_details
+{
+  display: none;
+  margin-left: 32px;
+  
+}
+
+.dtack_gmap.T_edit .T_gis_features .T_feature .T_primary
+{
+  white-space: nowrap;
+}
+
+.dtack_gmap.T_edit .T_gis_features .T_feature .T_primary > DIV
+{
+  display: inline-block;
+  padding: 2px 0px 2px 4px;
+}
+
+.dtack_gmap.T_edit .T_gis_features .T_feature .T_primary > .T_name_parts
+{
+  font-weight: bold;
+}
+
+.dtack_gmap.T_edit .T_gis_features .T_feature .T_primary > .T_description_parts
+{
+  color: blue;
+}
+
+.dtack_gmap .T_map.T_large
+{
+  height: 100%;
+  box-shadow: 0px 0px 10px #888888;
+}
+
+
+.dtack_gmap .T_map.T_small
+{
+  width: 600px;
+  height: 600px;
+  border: 1px solid black;
+}
+
+.dtack_gmap.T_participation_container
+{
+  font-weight: normal;
+  font-size:smaller;
+  
+}
+
+
+.dtproperty_textbox.dtack_gmap_latlng
+{
+  width: 288px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.dtproperty_textbox.dtack_gmap_view
+{
+  width: 320px;
+}
+
+.dtack_gmap_participant .T_icon
+{
+  width: 9px;
+  height: 9px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.dtack_gmap_participant .T_attached
+{
+  background-image: url(dtack_changewatcher_plus.gif);
+}
+
+.dtack_gmap_participant .T_detached
+{
+  background-image: url(dtack_changewatcher_minus.gif);
+}
+
+.dtack_gmap
+{
+}
+
+TEXTAREA.dtack_gmap.T_kml.T_description
+{
+  width: 320px;
+}
+
+TEXTAREA.dtack_gmap.T_kml.T_file
+{
+  width: 320px;
+}

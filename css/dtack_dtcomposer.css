@@ -1,0 +1,51 @@
+.dtcomposer.T_output
+{
+  padding-top: 6px;
+  display: inline-block;
+}
+
+.dtcomposer.T_output.T_checkbox
+{
+  padding-top: 4px;
+}
+
+.dtcomposer.T_output.T_checkboxes
+{
+  padding-top: 4px;
+}
+
+.dtcomposer.T_output.T_radio
+{
+  padding-top: 4px;
+}
+
+
+/* styles for the chunk composer buttons */
+.dtack_dtcomposer_chunk.T_container
+{
+}
+
+.dtack_dtcomposer_chunk.T_container .T_button
+{
+}
+
+.dtack_dtcomposer_chunk.T_container .T_button.T_disabled
+{
+  color: gray;
+}
+
+.dtack_dtcomposer_chunk.T_container .T_button.T_active
+{
+  color: orange;
+}
+
+.dtack_dtcomposer_chunk.T_container .T_button.T_numeric
+{
+  min-width: 32px;
+}
+
+/* this moves the filter label down to line up better with the buttons */
+.dtui_xregions_outer_div #chunk_pager_label
+{
+  padding-top: 6px;
+}

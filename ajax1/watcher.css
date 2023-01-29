@@ -1,0 +1,25 @@
+/* these are styles for the dtack base1 ajax_watcher in dtack_javascript */
+/* watchfrog #177 */
+
+#dtack__ajax__watcher_container {
+  position: fixed;
+  top: 2px;
+  left: 320px;
+  z-index: 2002;
+  border: 2px solid gold;
+  background-color: white;
+  padding: 2px;
+  color: black;
+  font-size: 9px;
+  min-width: 176px;
+  max-width: 640px;
+  max-height: 800px;
+  overflow: auto;
+  background-color: #FFFFEE;
+  border-radius: 8px;
+}                           
+
+#dtack__ajax__watcher_container.T_hidden
+{
+  display: none;
+}
